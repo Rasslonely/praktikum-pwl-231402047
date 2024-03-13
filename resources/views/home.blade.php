@@ -18,7 +18,7 @@
   {{-- akhir search bar --}}
 
   {{-- task --}}
-  <div class="flex flex-col gap-3 mb-20">
+  <div class="flex flex-col gap-3 mb-10">
     {{-- task 1 --}}
     <div role="alert" class="alert max-w-4xl mx-auto">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
