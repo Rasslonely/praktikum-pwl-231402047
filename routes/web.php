@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ToDoListController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +14,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
+Route::get('/', [ToDoListController::class, 'index']);
+
+Route::post('/', [ToDoListController::class, 'store']);
+
+Route::get('/edit/{id}', [ToDoListController::class, 'editTask']);
+
+Route::put('/updateTask', [ToDoListController::class, 'updateTask']);
+
+Route::get('/detail/{id}', [ToDoListController::class, 'detailTask']);
+
+Route::put('/showTask', [ToDoListController::class, 'showTask']);
+
+Route::delete('/deleteTask/{id}', [ToDoListController::class, 'deleteTask']);
+
+Route::get('/about', function () {
+    return view('welcome');
 });
 
-// collection merupakan nama lain dari array
+
